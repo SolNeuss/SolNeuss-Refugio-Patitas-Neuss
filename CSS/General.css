@@ -1,0 +1,624 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: larger;
+  margin-bottom: 250px;
+  background-color: #ebd7c1;
+}
+h1,
+h2,
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  grid-area: titulo;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+nav {
+  background-color: #dbb68f;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  grid-area: nav;
+}
+.nav2 {
+  display: none;
+}
+footer {
+  margin-left: "20px";
+  background-color: rgb(32, 32, 32);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  color: rgb(195, 193, 193);
+  text-align: center;
+  grid-area: footer;
+}
+h1 {
+  margin: 20px;
+  text-align: center;
+}
+main {
+  margin: 20px;
+}
+
+/* INICIO */
+#intro img {
+  grid-area: imagen;
+  display: block;
+  margin: auto;
+}
+#intro p {
+  padding-left: 50px;
+  grid-area: intro;
+}
+#intro {
+  display: grid;
+  grid-area: intro;
+  grid-template-columns: 45% 50%;
+  grid-template-rows: 20px 1fr;
+  grid-column-gap: 10px;
+  grid-template-areas:
+    "nav nav"
+    "titulo titulo"
+    "intro imagen"
+    "footer footer";
+}
+/* INTEGRANTES */
+#grids-container {
+  margin: 0%;
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  grid-gap: 5%;
+  grid-template-rows: 6% 50% 50%;
+  margin: auto;
+  justify-content: center;
+  grid-template-areas:
+    "titulo titulo"
+    "texto1 img1"
+    "img2 texto2";
+}
+.grids-item-uno p,
+.grids-item-uno h2,
+.grids-item-cuatro ol li,
+.grids-item-cuatro h2 {
+  padding-bottom: 10px;
+}
+.grids-item-uno,
+.grids-item-cuatro {
+  background-color: rgba(0, 255, 255, 0.267);
+  border-radius: 5%;
+  padding: 3%;
+  overflow: visible;
+}
+.grids-item-uno {
+  grid-area: texto1;
+}
+.grids-item-cuatro {
+  padding-left: 35px;
+  padding-bottom: 150px;
+  grid-area: texto2;
+  margin-bottom: 50px;
+}
+.grids-item-dos,
+.grids-item-tres {
+  margin: auto;
+  background-color: rgba(8, 71, 71, 0.938);
+  border-radius: 5%;
+  padding: 2%;
+  overflow: visible;
+}
+.grids-item-dos img {
+  height: 100%;
+  width: 100%;
+  border-radius: 3%;
+  grid-area: img1;
+}
+.grids-item-tres img {
+  height: 100%;
+  width: 100%;
+  border-radius: 3%;
+  grid-area: img2;
+}
+/* ADOPCIONES */
+#animal-tag {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: 3% auto;
+  grid-template-areas:
+    "titulo titulo titulo"
+    "prof1 prof2 prof3";
+  justify-content: space-evenly;
+  justify-items: center;
+  margin: auto;
+}
+
+.animal {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.274);
+  box-shadow: 0 10px 90px #00000024;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 15px;
+  border: solid;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.animal-body,
+.animal-footer {
+  padding: 10px;
+}
+.animal-body h2 {
+  padding-bottom: 7px;
+}
+.animal .animal-header {
+  position: relative;
+  height: 200px;
+}
+.animal .animal-header .profile-img {
+  width: 80%;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.animal-footer button {
+  background-color: #f18e55;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.animal-maya button {
+  background-color: #f18e55;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 15px;
+}
+.animal-footer button:hover {
+  background-color: #f34b18;
+}
+.prof1 {
+  grid-area: prof1;
+}
+.prof2 {
+  grid-area: prof2;
+}
+.prof3 {
+  grid-area: prof3;
+}
+
+/* EVENTOS */
+#contenedor-media {
+  width: 100%;
+  height: 150%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  grid-row-gap: 110px;
+  grid-column-gap: 10px;
+  margin: auto;
+  grid-template-areas:
+    "imag1 imag2 imag3"
+    "imag4 imag5 imag5"
+    "imag4 imag6 imag7";
+}
+.item-media img {
+  width: 100%;
+  height: 150%;
+  object-fit: cover;
+}
+.imag7 {
+  grid-area: imag7;
+}
+.imag6 {
+  grid-area: imag6;
+}
+.imag5 {
+  grid-area: imag5;
+}
+.imag4 {
+  height: 79.7%;
+  grid-area: imag4;
+}
+.imag3 {
+  grid-area: imag3;
+}
+.imag2 {
+  grid-area: imag2;
+}
+.imag1 {
+  grid-area: imag1;
+}
+
+/* CONTACTO */
+.forms-cont {
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  grid-template-columns: 40% 50%;
+  grid-column-gap: 40px;
+  grid-template-areas:
+    "titulo titulo"
+    "forms ."
+    "forms contacto"
+    "forms ."
+    "forms .";
+}
+.forms {
+  grid-area: forms;
+}
+
+input[type="text"],
+[type="email"],
+select,
+textarea {
+  width: 120%;
+  display: block;
+  padding: 12px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  background-color: #f0e1d1;
+  text-transform: uppercase;
+  margin-left: 10%;
+}
+#agree {
+  margin-left: 10%;
+}
+#submit {
+  margin-left: 10%;
+}
+#submit,
+#reset {
+  background-color: #f18e55;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#submit:hover,
+#reset:hover {
+  background-color: #f34b18;
+}
+
+#contactos img {
+  height: 100%;
+  margin-left: 300px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#contactos p {
+  display: inline-block;
+  margin-left: 10px;
+  padding-bottom: 50px;
+}
+#contactos {
+  grid-area: contacto;
+}
+#Contacto {
+  background-image: url("../media/huesitos.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+/* TABLET */
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+  /* INICIO */
+  #intro img {
+    grid-area: imagen;
+    display: block;
+    width: 95%;
+    max-width: 650px;
+    margin: auto;
+    padding-top: 20px;
+  }
+  #intro p {
+    padding-left: 50px;
+    padding-right: 50px;
+    grid-area: intro;
+  }
+  #intro {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 35px 5px 1fr 300px 30px;
+    grid-template-areas:
+      "nav"
+      "titulo"
+      "intro"
+      "imagen"
+      "footer";
+  }
+
+  #grids-container {
+    margin: 0%;
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    grid-gap: 2%;
+    grid-template-rows: 6% 47% 47%;
+    margin: auto;
+    justify-content: center;
+    grid-template-areas:
+      "titulo titulo"
+      "texto1 img1"
+      "img2 texto2";
+  }
+  /* ADOPCIONES */
+  #animal-tag {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    grid-row-gap: 40px;
+    grid-template-rows: 3% 50% 50%;
+    grid-template-areas:
+      "titulo titulo"
+      "prof1 prof2"
+      "prof3 prof3";
+  }
+  .prof3 {
+    width: 40%;
+    padding: 15px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .prof3 .animal-body {
+    padding-bottom: 40px;
+  }
+  /* EVENTOS */
+  #contenedor-media {
+    width: 100%;
+    height: 150%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 49%;
+    grid-template-rows: repeat(5, 200px);
+    grid-row-gap: 110px;
+    grid-column-gap: 10px;
+
+    grid-template-areas:
+      "imag1 imag2"
+      "imag5 imag5"
+      "imag5 imag5"
+      "imag6 imag4"
+      "imag3 imag4";
+  }
+  .imag7 {
+    display: none;
+  }
+  .imag5 {
+    height: 79.7%;
+  }
+  /* CONTACTO */
+  .forms-cont {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 40% 50%;
+    grid-template-areas:
+      "titulo titulo"
+      "forms ."
+      "forms contacto"
+      "forms ."
+      "forms .";
+  }
+  #contactos img {
+    margin-left: 150px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 900px) {
+  /* CONTACTO */
+  .forms-cont {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 50%;
+    grid-template-areas:
+      "titulo"
+      "forms"
+      "contacto";
+  }
+  #ubicacion,
+  #telefono,
+  #mail {
+    display: block;
+  }
+  #ubicacion {
+    margin-top: 50px;
+  }
+  #contactos {
+    margin-left: 0;
+  }
+  #contactos img {
+    margin-left: 40px;
+  }
+}
+/* MOBIL */
+@media screen and (max-width: 699px) {
+  nav {
+    display: none;
+  }
+  .nav2 {
+    display: initial;
+    position: relative;
+    z-index: 99;
+  }
+  .nav2 {
+    background-color: #dbb68f;
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    grid-area: nav;
+  }
+  .nav2 img {
+    width: 40px;
+  }
+  .desplegable {
+    position: absolute;
+    width: 30%;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .desplegable li a {
+    display: list-item;
+    padding: 15px;
+    background-color: #dbb68f;
+    border: dotted #f08e25;
+  }
+
+  .nav2 li:hover .desplegable {
+    visibility: visible;
+    opacity: 1;
+  }
+  /* INICIO */
+  #intro img {
+    grid-area: imagen;
+    display: block;
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    padding-top: 20px;
+  }
+  #intro p {
+    padding-left: 50px;
+    padding-right: 50px;
+    grid-area: intro;
+  }
+  #intro {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 35px 5px 1fr 300px 30px;
+    grid-template-areas:
+      "nav"
+      "titulo"
+      "intro"
+      "imagen"
+      "footer";
+  }
+
+  /* INTEGRANTES */
+  #grids-container {
+    margin: 0%;
+    display: grid;
+    grid-template-columns: 95%;
+    grid-gap: 3%;
+    grid-template-rows: 2% 25% auto 25% auto;
+    margin: auto;
+    justify-content: center;
+    grid-template-areas:
+      "titulo"
+      "texto1"
+      "img1"
+      "texto2"
+      "img2";
+  }
+  .grids-item-tres {
+    padding-bottom: 30px;
+  }
+  /* ADOPCIONES */
+  #animal-tag {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 20px;
+    grid-template-rows: 1% 35% 35% 35%;
+    grid-template-areas:
+      "titulo"
+      "prof1"
+      "prof2"
+      "prof3";
+  }
+  .animal button {
+    padding: 20px 30px;
+  }
+
+  .animal-header h1,
+  h3 {
+    padding-bottom: 20px;
+  }
+  /* EVENTOS */
+  #contenedor-media {
+    width: 100%;
+    height: 150%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(8, 200px);
+    grid-row-gap: 110px;
+    grid-column-gap: 10px;
+
+    grid-template-areas:
+      "imag1"
+      "imag2"
+      "imag3"
+      "imag4"
+      "imag4"
+      "imag5"
+      "imag6"
+      "imag7";
+  }
+  /* CONTACTO */
+  .forms-cont {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 70%;
+    grid-template-areas:
+      "titulo"
+      "forms"
+      "contacto";
+  }
+  #submit,
+  #reset {
+    background-color: #f18e55;
+    color: white;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 466px) {
+  .desplegable {
+    width: 80%;
+  }
+  #grids-container {
+    margin: 0%;
+    display: grid;
+    grid-template-columns: 95%;
+    grid-gap: 3%;
+    grid-template-rows: 2% 1fr 1fr;
+    margin: auto;
+    justify-content: center;
+    grid-template-areas:
+      "titulo"
+      "texto1"
+      "texto2";
+  }
+  .grids-item-uno {
+    margin-top: 40px;
+  }
+  .grids-item-cuatro {
+    margin-bottom: 40px;
+  }
+  .grids-item-dos,
+  .grids-item-tres {
+    display: none;
+  }
+}

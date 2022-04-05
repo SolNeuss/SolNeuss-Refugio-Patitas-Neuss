@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refugio Patitas</title>
+    <link rel="shortcut icon" href="media/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="CSS/General.css" />
+    <a
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:ital,wght@0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="Contacto">
+    <header>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="Integrantes.html">Integrantes</a>
+        <a href="Adopciones.html">Adopciones</a>
+        <a href="Eventos.html">Eventos</a>
+        <a href="Contacto.html">Contacto</a>
+      </nav>
+      <nav class="nav2">
+        <ul>
+          <li>
+            <img src="media/menu.png" alt="menu" class="menu" />
+            <ul class="desplegable">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="Integrantes.html">Integrantes</a></li>
+              <li><a href="Adopciones.html">Adopciones</a></li>
+              <li><a href="Eventos.html">Eventos</a></li>
+              <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <h1>Contactanos!</h1>
+    </header>
+    <main class="forms-cont">
+      <section class="forms">
+        <form action="gracias.html">
+          <label for="Nombre"></label>
+          <input
+            id="Nombre"
+            type="text"
+            placeholder="Nombre"
+            name="Nombre"
+            required
+          />
+
+          <label for="Apellido"></label>
+          <input
+            id="Apellido"
+            type="text"
+            placeholder="Apellido"
+            name="Apellido"
+            required
+          />
+
+          <label for="email"></label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Email"
+            name="email"
+            required
+          />
+
+          <label for="pets"></label>
+          <select name="pets" id="pets" required>
+            <option value="">
+              <font color="light grey">Motivo</font>
+            </option>
+            <option value="Adoptar">Adoptar</option>
+            <option value="Ayudar">Ayudar</option>
+            <option value="Donar<">Donar</option>
+            <option value="Otro">Otro</option>
+          </select>
+
+          <label for="requests"></label>
+          <textarea
+            name="Requests?"
+            id="requests"
+            cols="40"
+            rows="10"
+            placeholder="Comentarios"
+            required
+          ></textarea>
+
+          <input type="checkbox" name="agree_tos" id="agree" />
+          <label for="agree">Acepto los Terminos y Condiciones</label>
+          <br />
+          <input type="submit" name="Enviar formulario" id="submit" />
+          <input type="reset" name="Limpiar formulario" id="reset" />
+        </form>
+      </section>
+
+      <section id="contactos">
+        <div id="ubicacion">
+          <img
+            src="media/localizacion.png"
+            alt="ubicación"
+            width="20px"
+            height="30px"
+          />
+          <p>Caballito, CABA</p>
+        </div>
+        <div id="telefono">
+          <img
+            src="media/telefono.png"
+            alt="teléfono"
+            width="20px"
+            height="30px"
+          />
+          <p>11 1335-7020</p>
+        </div>
+        <div id="mail">
+          <img src="media/email.png" alt="email" width="20px" height="30px" />
+          <p>Refugiopatitas@gmail.com</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      Refugio Patitas© 2022 · Terminos y Condiciones · Aviso de Privacidad
+    </footer>
+  </body>
+</html>
