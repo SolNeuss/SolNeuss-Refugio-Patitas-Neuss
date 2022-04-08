@@ -80,19 +80,21 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 45%);
   grid-gap: 5%;
-  grid-template-rows: 6% 50% 50%;
+  grid-template-rows: 6% 40% 45%;
   margin: auto;
   justify-content: center;
   grid-template-areas:
     "titulo titulo"
     "texto1 img1"
     "img2 texto2";
+
 }
+
 .grids-item-uno p,
 .grids-item-uno h2,
 .grids-item-cuatro ol li,
 .grids-item-cuatro h2 {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 .grids-item-uno,
 .grids-item-cuatro {
@@ -100,15 +102,15 @@ main {
   border-radius: 5%;
   padding: 3%;
   overflow: visible;
+  transition: all 1s;
 }
 .grids-item-uno {
   grid-area: texto1;
 }
 .grids-item-cuatro {
   padding-left: 35px;
-  padding-bottom: 150px;
+  margin-top: 30px;
   grid-area: texto2;
-  margin-bottom: 50px;
 }
 .grids-item-dos,
 .grids-item-tres {
@@ -117,6 +119,7 @@ main {
   border-radius: 5%;
   padding: 2%;
   overflow: visible;
+  transition: all 1s;
 }
 .grids-item-dos img {
   height: 100%;
@@ -129,6 +132,9 @@ main {
   width: 100%;
   border-radius: 3%;
   grid-area: img2;
+}
+.grids-item-uno:hover, .grids-item-dos:hover, .grids-item-tres:hover, .grids-item-cuatro:hover{
+  transform: scale(0.9);
 }
 /* ADOPCIONES */
 #animal-tag {
@@ -144,7 +150,7 @@ main {
 }
 
 .animal {
-  width: 80%;
+  width: 70%;
   background-color: rgba(255, 255, 255, 0.274);
   box-shadow: 0 10px 90px #00000024;
   text-align: center;
@@ -153,6 +159,10 @@ main {
   border: solid;
   padding-top: 30px;
   padding-bottom: 30px;
+  transition: all 1s;
+}
+.animal:hover{
+  transform: scale(1.1);
 }
 .animal-body,
 .animal-footer {
@@ -449,7 +459,7 @@ textarea {
   }
 }
 /* MOBIL */
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 720px) {
   nav {
     display: none;
   }
@@ -528,7 +538,7 @@ textarea {
       "texto2"
       "img2";
   }
-  .grids-item-tres {
+  .grids-item-cuatro{
     padding-bottom: 30px;
   }
   /* ADOPCIONES */
