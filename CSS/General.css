@@ -372,6 +372,11 @@ textarea {
       "texto1 img1"
       "img2 texto2";
   }
+  /* INTEGRANTES */
+  .grids-item-cuatro{
+    padding-bottom: 10%;
+  }
+  
   /* ADOPCIONES */
   #animal-tag {
     display: grid;
@@ -433,6 +438,21 @@ textarea {
   }
 }
 @media screen and (min-width: 0px) and (max-width: 900px) {
+  /* INTEGRANTES */
+  #grids-container {
+    margin: 0%;
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    grid-gap: 5%;
+    grid-template-rows: 6% 40% 47%;
+    margin: auto;
+    justify-content: center;
+    grid-template-areas:
+      "titulo titulo"
+      "texto1 img1"
+      "img2 texto2";
+  
+  }
   /* CONTACTO */
   .forms-cont {
     display: grid;
@@ -459,7 +479,7 @@ textarea {
   }
 }
 /* MOBIL */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 723px) {
   nav {
     display: none;
   }
@@ -528,7 +548,7 @@ textarea {
     display: grid;
     grid-template-columns: 95%;
     grid-gap: 3%;
-    grid-template-rows: 2% 25% auto 25% auto;
+    grid-template-rows: 2% 25% auto 30% auto;
     margin: auto;
     justify-content: center;
     grid-template-areas:
