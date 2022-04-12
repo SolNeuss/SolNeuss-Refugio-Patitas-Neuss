@@ -204,9 +204,11 @@ main {
 }
 .prof1 {
   grid-area: prof1;
+  margin-bottom: 30px;
 }
 .prof2 {
   grid-area: prof2;
+  margin-bottom: 30px;
 }
 .prof3 {
   grid-area: prof3;
@@ -380,8 +382,7 @@ textarea {
   /* ADOPCIONES */
   #animal-tag {
     display: grid;
-    grid-template-columns: repeat(2, 45%);
-    grid-row-gap: 40px;
+    grid-template-columns: repeat(2, 50%);
     grid-template-rows: 3% 50% 50%;
     grid-template-areas:
       "titulo titulo"
