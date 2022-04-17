@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+$width:100%;
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: larger;
+  margin-bottom: 250px;
+  background-color: #ebd7c1;  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  grid-area: titulo;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+li{
+  list-style:none ;
+}
+a:hover{
+  color: #000;
+}
+nav {
+  background-color: #dbb68f;
+  width: $width;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  grid-area: nav;
+  a:hover{
+    text-decoration: underline;
+  }
+}
+.nav2 {
+  display: none;
+}
+footer {
+  background-color: rgb(32, 32, 32);
+  position: fixed;
+  bottom: 0;
+  width: $width;
+  height: 30px;
+  color: rgb(195, 193, 193);
+  text-align: center;
+  grid-area: footer;
+}
+h1 {
+  margin: 20px;
+  text-align: center;
+}
+main {
+  margin: 20px;
+}
+
+@import "estructura";
+@import "grids";
+@import "responsive";

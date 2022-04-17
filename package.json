@@ -1,0 +1,22 @@
+{
+  "name": "patitas-s.neuss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/General.scss css/General.css",
+	  "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://solneuss.github.io/SolNeuss-Refugio-Patitas-Neuss/"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
+}
