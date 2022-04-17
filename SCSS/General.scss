@@ -20,10 +20,11 @@ a {
   color: black;
 }
 li{
-  list-style:none ;
+  list-style:none;
 }
 a:hover{
-  color: #000;
+  color: black;
+  text-decoration: underline;
 }
 nav {
   background-color: #dbb68f;
