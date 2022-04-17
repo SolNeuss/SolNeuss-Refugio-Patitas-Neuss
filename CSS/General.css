@@ -218,14 +218,15 @@ main {
     #Contacto .forms textarea {
       width: 120%;
       display: block;
-      padding: 7px;
+      padding: 5px;
       border: 1px solid black;
       border-radius: 4px;
       box-sizing: border-box;
       margin-top: 6px;
-      margin-bottom: 16px;
       background-color: #f0e1d1;
-      text-transform: uppercase; }
+      font-size: 15px;
+      text-transform: uppercase;
+    }
     #Contacto .forms #submit,
     #Contacto .forms #reset {
       background-color: #f18e55;
@@ -234,7 +235,6 @@ main {
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      margin-top: 20px;
       margin-bottom: 20px; }
       #Contacto .forms #submit:hover,
       #Contacto .forms #reset:hover {
