@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
 $width:100%;
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: "Open Sans", sans-serif;
   font-size: larger;
-  margin-bottom: 250px;
+  margin-bottom: 100px;
   background-color: #ebd7c1;  
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 h1,
 h2,
@@ -48,13 +50,20 @@ footer {
   color: rgb(195, 193, 193);
   text-align: center;
   grid-area: footer;
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+  .fotored{
+    width:6%;
+  }
 }
 h1 {
   margin: 20px;
   text-align: center;
 }
 main {
-  margin: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 @import "estructura";

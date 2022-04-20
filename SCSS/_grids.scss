@@ -28,19 +28,6 @@
   
   }
 
-// ADOPCIONES
-#animal-tag {
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: 3% auto;
-    grid-template-areas:
-      "titulo titulo titulo"
-      "prof1 prof2 prof3";
-    justify-content: space-evenly;
-    justify-items: center;
-    margin: auto;
-  }
-
 // EVENTOS
 #contenedor-media {
     width: $width;

@@ -44,26 +44,8 @@
     padding-bottom: 10%;
   }
   
-  /* ADOPCIONES */
-  #animal-tag {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    row-gap: 70px;
-    grid-template-rows: 2% 50% 50%;
-    grid-template-areas:
-      "titulo titulo"
-      "prof1 prof2"
-      "prof3 prof3";
-  }
-  .prof3 {
-    width: 40%;
-    padding: 15px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-  }
-  .prof3 .animal-body {
-    padding-bottom: 40px;
-  }
+
+
   /* EVENTOS */
   #contenedor-media {
     width: 100%;
@@ -103,6 +85,12 @@
   #contactos img {
     margin-left: 150px;
   }
+}
+@media screen and (max-width:1000px){
+  .animal{
+    width: 40%;
+  }
+  
 }
 @media screen and (min-width: 0px) and (max-width: 900px) {
     /* INTEGRANTES */
@@ -230,27 +218,13 @@
     .grids-item-cuatro{
       padding-bottom: 30px;
     }
-    /* ADOPCIONES */
-    #animal-tag {
-      display: grid;
-      grid-template-columns: 100%;
-      grid-row-gap: 70px;
-      grid-template-rows: 1% 35% 35% 35%;
-      grid-template-areas:
-        "titulo"
-        "prof1"
-        "prof2"
-        "prof3";
-    }
+    // ADOPCIONES
     .animal{
-       button {
-        padding: 20px 30px;
-      }
+      width: 80%;
+      margin: auto;
+      margin-bottom: 30px;
     }
-    .animal-header h1,
-    h3 {
-      padding-bottom: 20px;
-    }
+
     /* EVENTOS */
     #contenedor-media {
       width: 100%;
@@ -326,5 +300,4 @@
         display: none;
       }
     }
-
 }

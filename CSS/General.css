@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: larger;
-  margin-bottom: 250px;
+  margin-bottom: 100px;
   background-color: #ebd7c1;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
+  box-sizing: border-box; }
 
 h1,
 h2,
@@ -21,9 +23,6 @@ a {
 li {
   list-style: none; }
 
-a:hover {
-  color: #000; }
-
 nav {
   background-color: #dbb68f;
   width: 100%;
@@ -34,6 +33,7 @@ nav {
   justify-content: space-evenly;
   grid-area: nav; }
   nav a:hover {
+    color: black;
     text-decoration: underline; }
 
 .nav2 {
@@ -47,14 +47,20 @@ footer {
   height: 30px;
   color: #c3c1c1;
   text-align: center;
-  grid-area: footer; }
+  grid-area: footer;
+  display: flex;
+  vertical-align: middle;
+  justify-content: center; }
+  footer .fotored {
+    width: 6%; }
 
 h1 {
   margin: 20px;
   text-align: center; }
 
 main {
-  margin: 20px; }
+  margin-left: 20px;
+  margin-right: 20px; }
 
 /* INICIO */
 #intro img {
@@ -117,8 +123,9 @@ main {
 
 /* ADOPCIONES */
 .animal {
-  width: 80%;
-  height: 100%;
+  height: 80%;
+  width: 27%;
+  height: auto;
   background-color: #00000024;
   box-shadow: 0 10px 90px #00000024;
   text-align: center;
@@ -126,6 +133,8 @@ main {
   border-radius: 15px;
   transition: all 1s;
   padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 30px;
   position: relative; }
   .animal:hover {
     transform: scale(1.1); }
@@ -135,46 +144,26 @@ main {
     padding-top: 10px;
     padding-bottom: 15px;
     position: relative; }
-  .animal .animal-body,
-  .animal .animal-footer {
-    padding: 10px; }
-    .animal .animal-body h2,
-    .animal .animal-footer h2 {
-      padding-bottom: 7px; }
-    .animal .animal-body button,
-    .animal .animal-footer button {
-      background-color: #f18e55;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 30px; }
-      .animal .animal-body button:hover,
-      .animal .animal-footer button:hover {
-        background-color: #f34b18; }
-
-.animal-maya button {
-  background-color: #f18e55;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: 15px; }
-  .animal-maya button:hover {
-    background-color: #f34b18; }
-
-.prof1 {
-  grid-area: prof1;
-  margin-bottom: 30px; }
-
-.prof2 {
-  grid-area: prof2;
-  margin-bottom: 30px; }
-
-.prof3 {
-  grid-area: prof3; }
+  .animal button {
+    background-color: #f18e55;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 30px; }
+    .animal button:hover {
+      background-color: #f34b18; }
+  .animal .animal-maya button {
+    background-color: #f18e55;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 15px; }
+    .animal .animal-maya button:hover {
+      background-color: #f34b18; }
 
 /* EVENTOS */
 .item-media img {
@@ -225,8 +214,7 @@ main {
       margin-top: 6px;
       background-color: #f0e1d1;
       font-size: 15px;
-      text-transform: uppercase;
-    }
+      text-transform: uppercase; }
     #Contacto .forms #submit,
     #Contacto .forms #reset {
       background-color: #f18e55;
@@ -268,15 +256,6 @@ main {
   margin: auto;
   justify-content: center;
   grid-template-areas: "titulo titulo" "texto1 img1" "img2 texto2"; }
-
-#animal-tag {
-  display: grid;
-  grid-template-columns: repeat(3, 33%);
-  grid-template-rows: 3% auto;
-  grid-template-areas: "titulo titulo titulo" "prof1 prof2 prof3";
-  justify-content: space-evenly;
-  justify-items: center;
-  margin: auto; }
 
 #contenedor-media {
   width: 100%;
@@ -327,20 +306,6 @@ main {
     grid-template-areas: "titulo titulo" "texto1 img1" "img2 texto2"; }
   .grids-item-cuatro {
     padding-bottom: 10%; }
-  /* ADOPCIONES */
-  #animal-tag {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    row-gap: 70px;
-    grid-template-rows: 2% 50% 50%;
-    grid-template-areas: "titulo titulo" "prof1 prof2" "prof3 prof3"; }
-  .prof3 {
-    width: 40%;
-    padding: 15px;
-    padding-top: 30px;
-    padding-bottom: 20px; }
-  .prof3 .animal-body {
-    padding-bottom: 40px; }
   /* EVENTOS */
   #contenedor-media {
     width: 100%;
@@ -364,6 +329,10 @@ main {
     grid-template-areas: "titulo titulo" "forms ." "forms contacto" "forms ." "forms ."; }
   #contactos img {
     margin-left: 150px; } }
+
+@media screen and (max-width: 1000px) {
+  .animal {
+    width: 40%; } }
 
 @media screen and (min-width: 0px) and (max-width: 900px) {
   /* INTEGRANTES */
@@ -453,18 +422,10 @@ main {
     grid-template-areas: "titulo" "texto1" "img1" "texto2" "img2"; }
   .grids-item-cuatro {
     padding-bottom: 30px; }
-  /* ADOPCIONES */
-  #animal-tag {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-row-gap: 70px;
-    grid-template-rows: 1% 35% 35% 35%;
-    grid-template-areas: "titulo" "prof1" "prof2" "prof3"; }
-  .animal button {
-    padding: 20px 30px; }
-  .animal-header h1,
-  h3 {
-    padding-bottom: 20px; }
+  .animal {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px; }
   /* EVENTOS */
   #contenedor-media {
     width: 100%;
