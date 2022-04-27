@@ -12,6 +12,12 @@
 }
 
 /* INTEGRANTES */
+$fondo:(texto:rgba(0, 255, 255, 0.267), foto:rgba(8, 71, 71, 0.938));
+@each $item, $color in $fondo{
+  .item-#{$item}{
+    background-color: $color;
+  }
+}
 #grids-container{
     p{
     padding-bottom: 10px;
@@ -28,7 +34,6 @@
 }
 .grids-item-uno,
 .grids-item-cuatro {
-  background-color: rgba(0, 255, 255, 0.267);
   border-radius: 5%;
   padding: 3%;
   overflow: visible;
@@ -44,10 +49,8 @@
 }
 .grids-item-dos,
 .grids-item-tres {
-  margin: auto;
-  background-color: rgba(8, 71, 71, 0.938);
+  @include sizes (auto, 2%);
   border-radius: 5%;
-  padding: 2%;
   overflow: visible;
   transition: all 1s;
 }
@@ -88,40 +91,27 @@
   position: relative;
   &:hover{
     transform: scale(1.1);  
-    } 
-    .animal-header .profile-img {
-      width: 260px;
-      height: 200px;
-      padding-top: 10px;
-      padding-bottom: 15px;
-      position: relative;
+  } 
+  .animal-header .profile-img {
+    width: 260px;
+    height: 200px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    position: relative;
+  }
+}
+.btn {
+  background-color: #f18e55;
+  @include sizes (15px,12px 20px);
+  border: none;
+  border-radius: 4px;
+  font-size: 17px;
+  &:hover{
+    background-color: #f34b18;
+    a{
+      color: black;
     }
-      button {
-        background-color: #f18e55;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        margin-top: 30px;
-        &:hover {
-          background-color: #f34b18;
-        }
-      }
-      .animal-maya{
-       button {
-        background-color: #f18e55;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        margin: 15px;
-        &:hover{
-          background-color: #f34b18;
-        }
-      }
-    } 
+  }
 }
 
 /* EVENTOS */
@@ -170,7 +160,7 @@
     [type="email"],
     select,
     textarea {
-      width: 120%;
+      width: 100%;
       display: block;
       padding: 5px;
       border: 1px solid black;
@@ -184,17 +174,9 @@
 
     #submit,
     #reset {
-      background-color: #f18e55;
+      @extend .btn;
+      margin-left: 5px;  
       color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-bottom: 20px;
-      &:hover {
-        background-color: #f34b18;
-      }
-  
     }
   }
   #contactos {
@@ -206,7 +188,6 @@
     }
     img {
       height: 100%;
-      margin-left: 200px;
       display: inline-block;
       vertical-align: middle;
     }

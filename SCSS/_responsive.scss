@@ -43,8 +43,6 @@
   .grids-item-cuatro{
     padding-bottom: 10%;
   }
-  
-
 
   /* EVENTOS */
   #contenedor-media {
@@ -74,16 +72,13 @@
   .forms-cont {
     display: grid;
     grid-template-rows: repeat(5, auto);
-    grid-template-columns: 40% 50%;
+    grid-template-columns: 55% 45%;
     grid-template-areas:
       "titulo titulo"
       "forms ."
       "forms contacto"
       "forms ."
       "forms .";
-  }
-  #contactos img {
-    margin-left: 150px;
   }
 }
 @media screen and (max-width:1000px){
@@ -112,7 +107,7 @@
     .forms-cont {
       display: grid;
       grid-template-rows: repeat(3, auto);
-      grid-template-columns: 50%;
+      grid-template-columns: 70%;
       grid-template-areas:
         "titulo"
         "forms"
@@ -125,15 +120,6 @@
     }
     #ubicacion {
       margin-top: 50px;
-    }
-    #contactos {
-      margin-left: 0;
-        p{
-          width: 35px;
-        } 
-        img{
-          width: 20px;
-        }
     }
   }
   /* MOBIL */
@@ -268,12 +254,10 @@
     #contactos {
       p {
         display: inline-block;
-        margin-left: 0px;
         padding-bottom: 50px;
       }
       img {
         height: 100%;
-        margin-left: 0px;
         display: inline-block;
         vertical-align: middle;
       }

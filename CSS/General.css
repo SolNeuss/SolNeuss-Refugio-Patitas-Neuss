@@ -73,6 +73,12 @@ main {
   grid-area: intro; }
 
 /* INTEGRANTES */
+.item-texto {
+  background-color: rgba(0, 255, 255, 0.267); }
+
+.item-foto {
+  background-color: rgba(8, 71, 71, 0.938); }
+
 #grids-container p {
   padding-bottom: 10px; }
 
@@ -84,7 +90,6 @@ main {
 
 .grids-item-uno,
 .grids-item-cuatro {
-  background-color: rgba(0, 255, 255, 0.267);
   border-radius: 5%;
   padding: 3%;
   overflow: visible;
@@ -100,9 +105,8 @@ main {
 .grids-item-dos,
 .grids-item-tres {
   margin: auto;
-  background-color: rgba(8, 71, 71, 0.938);
-  border-radius: 5%;
   padding: 2%;
+  border-radius: 5%;
   overflow: visible;
   transition: all 1s; }
 
@@ -144,26 +148,20 @@ main {
     padding-top: 10px;
     padding-bottom: 15px;
     position: relative; }
-  .animal button {
-    background-color: #f18e55;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 30px; }
-    .animal button:hover {
-      background-color: #f34b18; }
-  .animal .animal-maya button {
-    background-color: #f18e55;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 15px; }
-    .animal .animal-maya button:hover {
-      background-color: #f34b18; }
+
+.btn, #Contacto .forms #submit,
+#Contacto .forms #reset {
+  background-color: #f18e55;
+  margin: 15px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 17px; }
+  .btn:hover, #Contacto .forms #submit:hover,
+  #Contacto .forms #reset:hover {
+    background-color: #f34b18; }
+    .btn:hover a, #Contacto .forms #submit:hover a, #Contacto .forms #reset:hover a {
+      color: black; }
 
 /* EVENTOS */
 .item-media img {
@@ -205,7 +203,7 @@ main {
     #Contacto .forms [type="email"],
     #Contacto .forms select,
     #Contacto .forms textarea {
-      width: 120%;
+      width: 100%;
       display: block;
       padding: 5px;
       border: 1px solid black;
@@ -217,16 +215,8 @@ main {
       text-transform: uppercase; }
     #Contacto .forms #submit,
     #Contacto .forms #reset {
-      background-color: #f18e55;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-bottom: 20px; }
-      #Contacto .forms #submit:hover,
-      #Contacto .forms #reset:hover {
-        background-color: #f34b18; }
+      margin-left: 5px;
+      color: white; }
   #Contacto #contactos {
     grid-area: contacto; }
     #Contacto #contactos p {
@@ -235,7 +225,6 @@ main {
       padding-bottom: 50px; }
     #Contacto #contactos img {
       height: 100%;
-      margin-left: 200px;
       display: inline-block;
       vertical-align: middle; }
 
@@ -271,7 +260,7 @@ main {
 .forms-cont {
   display: grid;
   grid-template-rows: repeat(5, auto);
-  grid-template-columns: 40% 50%;
+  grid-template-columns: 55% 45%;
   grid-column-gap: 40px;
   grid-template-areas: "titulo titulo" "forms ." "forms contacto" "forms ." "forms ."; }
 
@@ -325,10 +314,8 @@ main {
   .forms-cont {
     display: grid;
     grid-template-rows: repeat(5, auto);
-    grid-template-columns: 40% 50%;
-    grid-template-areas: "titulo titulo" "forms ." "forms contacto" "forms ." "forms ."; }
-  #contactos img {
-    margin-left: 150px; } }
+    grid-template-columns: 55% 45%;
+    grid-template-areas: "titulo titulo" "forms ." "forms contacto" "forms ." "forms ."; } }
 
 @media screen and (max-width: 1000px) {
   .animal {
@@ -349,20 +336,14 @@ main {
   .forms-cont {
     display: grid;
     grid-template-rows: repeat(3, auto);
-    grid-template-columns: 50%;
+    grid-template-columns: 70%;
     grid-template-areas: "titulo" "forms" "contacto"; }
   #ubicacion,
   #telefono,
   #mail {
     display: block; }
   #ubicacion {
-    margin-top: 50px; }
-  #contactos {
-    margin-left: 0; }
-    #contactos p {
-      width: 35px; }
-    #contactos img {
-      width: 20px; } }
+    margin-top: 50px; } }
 
 /* MOBIL */
 @media screen and (max-width: 723px) {
@@ -454,11 +435,9 @@ main {
     margin-top: 20px; }
   #contactos p {
     display: inline-block;
-    margin-left: 0px;
     padding-bottom: 50px; }
   #contactos img {
     height: 100%;
-    margin-left: 0px;
     display: inline-block;
     vertical-align: middle; } }
 
