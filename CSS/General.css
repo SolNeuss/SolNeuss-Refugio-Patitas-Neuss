@@ -205,11 +205,11 @@ main {
     #Contacto .forms textarea {
       width: 100%;
       display: block;
-      padding: 5px;
+      padding: 10px;
       border: 1px solid black;
       border-radius: 4px;
       box-sizing: border-box;
-      margin-top: 6px;
+      margin-top: 0px;
       background-color: #f0e1d1;
       font-size: 15px;
       text-transform: uppercase; }
@@ -222,11 +222,15 @@ main {
     #Contacto #contactos p {
       display: inline-block;
       margin-left: 10px;
-      padding-bottom: 50px; }
+      padding-bottom: 20px; }
     #Contacto #contactos img {
       height: 100%;
       display: inline-block;
       vertical-align: middle; }
+    #Contacto #contactos #telefono p {
+      margin-top: 8%; }
+  #Contacto .maps {
+    grid-area: map; }
 
 #intro {
   display: grid;
@@ -259,10 +263,10 @@ main {
 
 .forms-cont {
   display: grid;
-  grid-template-rows: repeat(5, auto);
-  grid-template-columns: 55% 45%;
+  grid-template-rows: 1% 26% 60%;
+  grid-template-columns: 52% 45%;
   grid-column-gap: 40px;
-  grid-template-areas: "titulo titulo" "forms ." "forms contacto" "forms ." "forms ."; }
+  grid-template-areas: "titulo titulo" "forms contacto" "forms map"; }
 
 /* TABLET */
 @media screen and (min-width: 700px) and (max-width: 1200px) {
@@ -309,13 +313,7 @@ main {
   .imag7 {
     display: none; }
   .imag5 {
-    height: 79.7%; }
-  /* CONTACTO */
-  .forms-cont {
-    display: grid;
-    grid-template-rows: repeat(5, auto);
-    grid-template-columns: 55% 45%;
-    grid-template-areas: "titulo titulo" "forms ." "forms contacto" "forms ." "forms ."; } }
+    height: 79.7%; } }
 
 @media screen and (max-width: 1000px) {
   .animal {
@@ -335,15 +333,17 @@ main {
   /* CONTACTO */
   .forms-cont {
     display: grid;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
     grid-template-columns: 70%;
-    grid-template-areas: "titulo" "forms" "contacto"; }
+    grid-template-areas: "titulo" "forms" "contacto" "map"; }
   #ubicacion,
   #telefono,
   #mail {
     display: block; }
   #ubicacion {
-    margin-top: 50px; } }
+    margin-top: 50px; }
+  #contacto {
+    margin-bottom: 0%; } }
 
 /* MOBIL */
 @media screen and (max-width: 723px) {
@@ -421,9 +421,9 @@ main {
   /* CONTACTO */
   .forms-cont {
     display: grid;
-    grid-template-rows: repeat(3, auto);
-    grid-template-columns: 70%;
-    grid-template-areas: "titulo" "forms" "contacto"; }
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 100%;
+    grid-template-areas: "titulo" "forms" "contacto" "map"; }
   #submit,
   #reset {
     background-color: #f18e55;

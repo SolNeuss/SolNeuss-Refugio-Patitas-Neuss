@@ -162,16 +162,15 @@ $fondo:(texto:rgba(0, 255, 255, 0.267), foto:rgba(8, 71, 71, 0.938));
     textarea {
       width: 100%;
       display: block;
-      padding: 5px;
+      padding: 10px;
       border: 1px solid black;
       border-radius: 4px;
       box-sizing: border-box;
-      margin-top: 6px;
+      margin-top: 0px;
       background-color: #f0e1d1;
       font-size: 15px;
       text-transform: uppercase;
     }
-
     #submit,
     #reset {
       @extend .btn;
@@ -184,12 +183,18 @@ $fondo:(texto:rgba(0, 255, 255, 0.267), foto:rgba(8, 71, 71, 0.938));
     p {
       display: inline-block;
       margin-left: 10px;
-      padding-bottom: 50px;
+      padding-bottom: 20px;
     }
     img {
       height: 100%;
       display: inline-block;
       vertical-align: middle;
     }
+    #telefono p {
+      margin-top: 8%;
+    }
   }
+  .maps{
+    grid-area: map;  }
+
 }

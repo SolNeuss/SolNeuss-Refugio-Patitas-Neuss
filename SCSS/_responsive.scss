@@ -68,18 +68,6 @@
   .imag5 {
     height: 79.7%;
   }
-  /* CONTACTO */
-  .forms-cont {
-    display: grid;
-    grid-template-rows: repeat(5, auto);
-    grid-template-columns: 55% 45%;
-    grid-template-areas:
-      "titulo titulo"
-      "forms ."
-      "forms contacto"
-      "forms ."
-      "forms .";
-  }
 }
 @media screen and (max-width:1000px){
   .animal{
@@ -106,12 +94,13 @@
     /* CONTACTO */
     .forms-cont {
       display: grid;
-      grid-template-rows: repeat(3, auto);
+      grid-template-rows: repeat(4, auto);
       grid-template-columns: 70%;
       grid-template-areas:
         "titulo"
         "forms"
-        "contacto";
+        "contacto"
+        "map";
     }
     #ubicacion,
     #telefono,
@@ -120,6 +109,9 @@
     }
     #ubicacion {
       margin-top: 50px;
+    }
+    #contacto{
+      margin-bottom: 0%;
     }
   }
   /* MOBIL */
@@ -234,12 +226,13 @@
     /* CONTACTO */
     .forms-cont {
       display: grid;
-      grid-template-rows: repeat(3, auto);
-      grid-template-columns: 70%;
+      grid-template-rows: auto auto auto auto;
+      grid-template-columns: 100%;
       grid-template-areas:
         "titulo"
         "forms"
-        "contacto";
+        "contacto"
+        "map";
     }
     #submit,
     #reset {

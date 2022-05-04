@@ -47,13 +47,11 @@
 //   CONTACTO
 .forms-cont {
     display: grid;
-    grid-template-rows: repeat(5, auto);
-    grid-template-columns: 55% 45%;
+    grid-template-rows: 1% 26% 60%;
+    grid-template-columns: 52% 45%;
     grid-column-gap: 40px;
     grid-template-areas:
       "titulo titulo"
-      "forms ."
       "forms contacto"
-      "forms ."
-      "forms .";
+      "forms map"
   }
